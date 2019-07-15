@@ -54,12 +54,25 @@ public class gamePlay extends JPanel implements KeyListener, ActionListener {
 
         //set ball
         g.setColor(Color.yellow);
-        g.fillRect(ballposX, ballposY, 20, 20);
+        g.fillOval(ballposX, ballposY, 20, 20);
 
-        public void keyTyped(KeyEvent e){ }
+        g.dispose();
+
+        public void keyTyped(KeyEvent e){
+            //tpah
+        }
         public void KeyReleased(KeyEvent e){ }
 
         public void actionPerformed(ActionEvent e){
+            timer.start();
+            repaint(); // repeat paint function again and again
+          //this is to do 
+        }
+
+        
+       
+        public void KeyPressed(KeyEvent e){
+
             if(e.getKeyCode()==KeyEvent.VK_RIGHT){
                 if(playerX >=600){
                     playerX=600;
@@ -76,12 +89,20 @@ public class gamePlay extends JPanel implements KeyListener, ActionListener {
                     moveLeft();
                 }
             }
-            //this is to do 
-        }
-       
-        public void KeyPressed(KeyEvent e){
 
         }
+
+        public void moveRight(){
+            play=true;
+            playerX+=20;
+
+        }
+        public void moveRight(){
+            play=true;
+            playerX+=20;
+            
+        }
+
        
     }
 
