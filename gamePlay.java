@@ -61,10 +61,19 @@ public class gamePlay extends JPanel implements KeyListener, ActionListener {
         public void keyTyped(KeyEvent e){
             //tpah
         }
-        public void KeyReleased(KeyEvent e){ }
+        public void KeyReleased(KeyEvent e){
+
+         }
 
         public void actionPerformed(ActionEvent e){
             timer.start();
+
+            if(play){
+                ballposX+=ballXdir;
+                ballposY+=ballposY;
+
+            }
+
             repaint(); // repeat paint function again and again
           //this is to do 
         }
